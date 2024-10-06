@@ -1,0 +1,63 @@
+{% extends "pages/header.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title %}
+        become a partner      
+        {% endblock title %}
+    </title>
+    {% block extra_css %}
+    <link href="{% static 'css/becomePartner.css' %}" rel="stylesheet" />
+    {% endblock %}
+</head>
+
+{% block content %}
+
+    <nav class="navbar">
+        <h1 class="logo"><span class="logo-text">Project<span class="scope">Scope</span></span></h1>
+        <ul class="nav-links">
+            <li><a class="active" href="{%url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a class="nav-anchor" href="index.html#explore-pro"><i class="fa-solid fa-book"></i> Project Topics</a></li>
+            <li><a class="nav-anchor" href="index.html#blog-container"><i class="fa-solid fa-comment fa-rotate-270"></i> Blog</a></li>
+            <li><a class="nav-anchor" href="index.html#faq"><i class="fa-solid fa-question"></i> Faq</a></li>
+            <li><a class="nav-anchor" href="index.html#nid_hep"><i class="fa-solid fa-address-book"></i> Contact Us</a></li>
+            <li><a class="nav-anchor" href="{%url 'become' %}"><i class="fa-solid fa-handshake"></i> Become a Partner</a></li>
+            <li><a class="nav-anchor" href="{%url 'hire' %}"><i class="fa-solid fa-pen-to-square"></i> Hire a Writer</a></li>
+            <li><a class="login-btn" href="{%url 'login' %}">Log in</a></li>
+        </ul>
+        <div class="menuIcon" style="font-size:25px;cursor:pointer">☰</div>
+    </nav>
+    <div class="line"></div>
+
+    <!-- Become a Partner section -->
+    <section>
+        <h1>Become a Partner</h1>
+        <div class="stu-con">
+            <div class="stu">
+                <img id="stu" src="{% static 'assets/img/graduate.jpg' %}" alt="">
+                <h3>Student Partner</h3>
+                <p>Create a profile as a Student partner to have access to free research materials</p>
+                <button class="btn-stu" onclick="studentSignUp()">Sign up as a Student</button>
+                <p><a href="#">Who is a student partner?</a></p>
+            </div>
+
+            <div class="con">
+                <img id="stu" src="{%static 'assets/img/consultant.jpg'%}" alt="">
+                <h3>Consultant</h3>
+                <p>Consultant partner 
+                provides expert opinion and render research services to clients</p>
+                <button class="btn-con" onclick="consultantSignUp()">Sign up as a Consultant</button>
+                <p><a href="#">Who is a Consultant?</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======Footer Section -->   
+    <footer>
+        <p>© 2024 ProjectScope</p>
+    </footer>
+    {% endblock content %}
+</html>

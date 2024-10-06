@@ -1,0 +1,104 @@
+{% extends "pages/header.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title %}
+        hire a writer       
+        {% endblock title %}
+    </title>
+    {% block extra_css %}
+    <link href="{% static 'css/hire_writer.css' %}" rel="stylesheet" />
+    {% endblock %}
+    <script src="{% static 'js/hire_writer.js' %}"></script>
+</head>
+
+{% block content %}
+
+    <div class="container">
+    <nav class="navbar">
+        <h1 class="logo"><span class="logo-text">Project<span class="scope">Scope</span></span></h1>
+        <ul class="nav-links">
+            <li><a class="active" href="{%url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a class="nav-anchor" href="index.html#explore-pro"><i class="fa-solid fa-book"></i> Project Topics</a></li>
+            <li><a class="nav-anchor" href="index.html#blog-container"><i class="fa-solid fa-comment fa-rotate-270"></i> Blog</a></li>
+            <li><a class="nav-anchor" href="index.html#faq"><i class="fa-solid fa-question"></i> Faq</a></li>
+            <li><a class="nav-anchor" href="index.html#nid_hep"><i class="fa-solid fa-address-book"></i> Contact Us</a></li>
+            <li><a class="nav-anchor" href="{%url 'become' %}"><i class="fa-solid fa-handshake"></i> Become a Partner</a></li>
+            <li><a class="nav-anchor" href="{%url 'hire' %}"><i class="fa-solid fa-pen-to-square"></i> Hire a Writer</a></li>
+            <li><a class="login-btn" href="{%url 'login' %}">Log in</a></li>
+        </ul>
+        <div class="menuIcon" style="font-size:25px;cursor:pointer">☰</div>
+    </nav>
+    <div class="line"></div>
+
+    <!-- Main section of hire a writer -->
+    <section>
+        <div class="form-part">
+            <h1>FILL THE FORM BELOW TO GET A WRITER</h1><hr>
+            <form class="hire-form" action="">
+                <div>
+                    <label for="name">Your name:</label><br>
+                    <input type="text" name="name" id=""><br>
+                    <label for="email">Your email:</label><br>
+                    <input type="text" name="email" id="email"><br>
+                    <label for="phone">Your Phone Number:</label><br>
+                    <input type="number" name="phone" id=""><br>
+                    <label for="text">Project Title:</label><br>
+                    <input type="text" name="projectTitle" id=""><br>
+                    <label for="education">Educational Level:</label><br>
+                    <select id="education" name="education">
+                        <option value="BSC">BSC</option>
+                        <option value="HND">HND</option>
+                        <option value="OND/NCE">OND/NCE</option>
+                        <option value="MSc/MBA/PGD">MSc/MBA/PGD</option>
+                    </select>
+                </div>
+
+                <div class="textArea">
+                    <label for="message">Your Department / Project Format (if any) *</label>
+                    <textarea name="message" rows="23" cols="40"></textarea>
+                    <input id="submit" type="submit" value="Submit Request">
+                </div>
+            </form>
+        </div>
+        <!-- Search for courses part -->
+         <div class="dept-part">
+            <div class="colls-one">
+                <h2>EXPLORE DEPARTMENTS</h2>
+                <ul>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                </ul>
+            </div>
+         </div>
+    </section>
+
+    <!-- ======Footer Section -->   
+    <footer>
+        <p>© 2024 ProjectScope</p>
+    </footer>
+    
+</div>
+{% endblock content %}
+</html>

@@ -1,0 +1,155 @@
+{% extends "pages/header.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title %}
+        New ProjectScope        
+        {% endblock title %}
+    </title>
+    
+</head>
+
+    {% block content %}
+
+
+    <nav class="navbar">
+        <h1 class="logo"><span class="logo-text">Project<span class="scope">Scope</span></span></h1>
+        <ul class="nav-links">
+            <li><a class="active" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a class="nav-anchor" href="#" onclick="scrollToClass('explore-pro')"><i class="fa-solid fa-book"></i> Project Topics</a></li>
+            <li><a class="nav-anchor" href="#" onclick="scrollToClass('blog-container')"><i class="fa-solid fa-comment fa-rotate-270"></i> Blog</a></li>
+            <li><a class="nav-anchor" href="#" onclick="scrollToClass('faq')"><i class="fa-solid fa-question"></i> FAQs</a></li>
+            <li><a class="nav-anchor" href="#" onclick="scrollToClass ('nid-hep')"><i class="fa-solid fa-address-book"></i> Contact Us</a></li>
+            <li><a class="nav-anchor" href="{% url 'become' %}"><i class="fa-solid fa-handshake"></i> Become a Partner</a></li>
+            <li><a class="nav-anchor" href="{% url 'hire' %}"><i class="fa-solid fa-pen-to-square"></i> Hire a Writer</a></li>
+            <li><a class="login-btn" href="{% url 'login' %}">Log in</a></li>
+        </ul>
+        <div class="menuIcon" style="font-size:25px;cursor:pointer">☰</div>
+    </nav>
+    <div class="line"></div>
+    <header>
+        <div class="roww first-roww">
+            <div class="coll">
+                <h1>Welcome To ProjectScope</h1>
+                <div class="short-line"></div>
+                <h2>Innovative Online Platform For Managing Research Projects</h2>
+                <h3>SEARCH FOR YOUR PROJECT TOPIC:</h3>
+                <form action="#">
+                    <input id="ent-pro-tit" type="text" id="fname" name="fname" placeholder="Enter project title">
+                    <input class="search-btn" id="search" type="submit" value="Search">
+                    
+                </form>
+            </div>
+            <div class="coll">
+                <div class="image-grid">
+                    <img class="img" src="{% static 'assets/img/college-student-with-curly-hair-bristle-looking-concentrated-while-reading-something-important-book-holding-pen-chin-hard-working-man-being-involved-studying-working-hard-all-day (2).jpg' %}" alt="curly hair boy">
+                    <img class="img" src="{% static 'assets/img/college-student-with-curly-hair-bristle-looking-concentrated-while-reading-something-important-book-holding-pen-chin-hard-working-man-being-involved-studying-working-hard-all-day (2).jpg' %}" alt="curly hair boy">
+                    <img class="img" src="{% static 'assets/img/college-student-with-curly-hair-bristle-looking-concentrated-while-reading-something-important-book-holding-pen-chin-hard-working-man-being-involved-studying-working-hard-all-day (2).jpg' %}" alt="curly hair boy">
+                    <img class="img" src="{% static 'assets/img/college-student-with-curly-hair-bristle-looking-concentrated-while-reading-something-important-book-holding-pen-chin-hard-working-man-being-involved-studying-working-hard-all-day (2).jpg' %}" alt="curly hair boy">
+                </div>
+                <!-- image to display for small screen size -->
+                 <div class="image-grid-two"> <img class="img" src="{%static 'assets/img/college-student-with-curly-hair-bristle-looking-concentrated-while-reading-something-important-book-holding-pen-chin-hard-working-man-being-involved-studying-working-hard-all-day (2).jpg'%}" alt=""></div>
+            </div>
+        </div>
+    </header>
+    <!-- ======Explore projects by departments and Blog section -->
+    <section class="explore-pro" id="explore-pro">
+        <div class="roww sec-roww">
+            <div class="ex-pro-colls colls-one">
+                <h2>EXPLORE DEPARTMENTS</h2>
+                <ul>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Accounting</a></li>
+                </ul>
+
+            </div>
+            <!-- seccond column -->
+            <div class="ex-pro-colls colls-two">
+                <div class="ro">
+                    <h2>RESEARCH MATERIALS AND PROJECT TOPICS FOR UNDERGRADUATES</h2>
+                    <p>Discover comprehensive <b><a href="#">research materials</a></b> and <b><a href="#">project topics</a></b> for every academic level and discipline.
+                        We offer academic writing services for 
+                        projects, research analyses, term papers, theses, proposals, dissertations, journals, assignments, and more.
+                    </p><hr>
+                    <table>
+                        <h2>HOW TO TALK TO A RESEARCH CONSULTANT/ DATA ANALYST</h2>
+                        <ul>
+                            <li class="lis">First register to become a student partner</li>
+                            <li class="lis">After registration click on talk to a consultant/data analyst</li>
+                            <li class="lis">Fill in your details and purpose</li>
+                            <li class="lis">Click on submit and wait for 24 hours a consultant will reach out to you on the channel you entered</li>
+                        </ul>
+                    </table><hr>
+                    <h2 id="nid_hep" class="nid-hep">NEED HELP? CHAT WITH US!</h2>
+                    <h3 id="nid_hep"><a href="https://wa.me/2348083193505">+234 808 319 3505</a></h3>
+                    <h3 id="nid_hep"><a href="https://wa.me/2348083193505">+234 808 319 3505</a></h3><hr>
+                </div>
+                <!-- Frequently Asked Questions -->
+                <div class="faq" id="faq">
+                    <h2>FREQUENTLY ASKED QUESTIONS</h2><hr>
+                    <h3>How do i choose a Good Project Topic</h3>
+                    <p><i class="fa-solid fa-pen"></i> Look for your department and select any project topic of your choice based on your area of interest</p><hr>
+                    <h3>Is it a complete research project or just materials?</h3>
+                    <p><i class="fa-solid fa-pen"></i> It is a Complete Research Project i.e Chapters 1-5 including Abstract, Table of Contents, Full References, Questionnaires / Secondary Data</p><hr>
+                    <h3>How do i get my complete project?</h3>
+                    <p><i class="fa-solid fa-pen"></i> Your Complete Project Material will be sent to your Email Address in Ms Word document format or PDF format.</p><hr>
+
+                </div>
+                
+                <!-- second ro for blog section-->
+                <div class="ro ro-two">
+                    <h2>RECENT BLOG POSTS</h2>
+                    <div class="blog-container" id="blog-container">
+                        <div class="blog-post">
+                          <h2 class="post-title">HOW TO CHOOSE A GOOD PROJECT TOPIC</h2>
+                          <p class="post-date">August 29, 2024</p>
+                          <div class="post-content">
+                            <p>The educational curriculum states that in order to be awarded a degree after the graduating, there is need to carry out a research in a field of study. Consequently, this is done at the final year level in all university institutions. A lot of students have challenge when it comes to choosing a research topic. This is as a result of the fact that they lack knowledge on the</p>
+                          </div>
+                          <hr>
+                          <div class="post-footer">
+                            <a href="#" class="read-more">Read More</a>
+                            <span class="views">👁️ 123</span>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======Footer Section -->   
+    <footer>
+        <p>© 2024 ProjectScope</p>
+    </footer>
+    
+
+
+
+    {% endblock content %}
+
+</html>
